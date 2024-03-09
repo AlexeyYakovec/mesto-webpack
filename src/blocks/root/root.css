@@ -1,0 +1,8 @@
+.root {
+  font-family: "Inter", sans-serif;
+  background-color: #000000;
+  align-self: center;
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}

@@ -1,0 +1,27 @@
+.profile__avatar-edit-button {
+  background: transparent;
+  border-radius: 50%;
+  margin: 0 30px 0 0;
+  height: 120px;
+  outline: none;
+  width: 120px;
+  border: none;
+  padding: 0;
+}
+
+.profile__avatar-edit-button:hover {
+  background-image: url("../../../images/pencil.svg");
+  background-color: rgba(0, 0, 0, .8);
+  transition: background-color .3s;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: 1px solid black;
+  background-size: 26px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+  .profile__avatar-edit-button {
+    margin: 0 0 20px 0;
+  }
+}
