@@ -23,7 +23,11 @@ const popupAddCard = document.querySelector(".popup_type_add-card");
 const nameInput = document.querySelector(".popup__input_name");
 const profileName = document.querySelector(".profile__name");
 const jobInput = document.querySelector(".popup__input_job");
-const profileJob = document.querySelector(".profile__name");
+const profileJob = document.querySelector(".profile__job");
+
+/* form */
+const formProfile = document.querySelector(".form_type-profile");
+const formAddCard = document.querySelector(".form_type-card");
 
 function createCard(name, link) {
   const newCard = templateCard.content
@@ -97,9 +101,20 @@ function handleOverlayClick(e) {
 function editProfile() {
   openPopup(popupProfile);
 
-  // nameInput.value = profileName.textContent;
-  // jobInput.value = profileJob.textContent;
+  nameInput.value = profileName.textContent;
+  jobInput.value = profileJob.textContent;
 }
+
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+
+  profileName.textContent = nameInput.value;
+  profileJob.textContent = jobInput.value;
+
+  closePopup(popupProfile);
+}
+
+formProfile.addEventListener("submit", handleProfileFormSubmit);
 
 addButton.addEventListener("click", () => {
   openPopup(popupAddCard);
