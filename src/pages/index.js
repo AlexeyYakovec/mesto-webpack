@@ -2,12 +2,6 @@ import { initialCards } from "../scripts/initialCards";
 
 import "../pages/index.css";
 
-/* buttons */
-const addButton = document.querySelector(".profile__add-button");
-const editButton = document.querySelector(".profile__edit-button");
-const closeAddCard = document.querySelector(".close_add-card");
-const closeEditPortfolio = document.querySelector(".close_edit-portfolio");
-
 /* open image view */
 const popupImageView = document.querySelector(".popup_type_image-view");
 const popupImage = document.querySelector(".popup__image");
@@ -19,19 +13,21 @@ const cardsContainer = document.querySelector(".cards__list");
 
 /* profile */
 const popupProfile = document.querySelector(".popup_type_edit-profile");
-const popupAddCard = document.querySelector(".popup_type_add-card");
 const nameInput = document.querySelector(".popup__input_name");
 const profileName = document.querySelector(".profile__name");
 const jobInput = document.querySelector(".popup__input_job");
 const profileJob = document.querySelector(".profile__job");
-
-/* form */
+const editButton = document.querySelector(".profile__edit-button");
+const closeEditPortfolio = document.querySelector(".close_edit-portfolio");
 const formProfile = document.querySelector(".form_type-profile");
-const formAddCard = document.querySelector(".form_type-card");
 
-/* card */
+/* add card */
+const formAddCard = document.querySelector(".form_type-card");
+const addButton = document.querySelector(".profile__add-button");
+const closeAddCard = document.querySelector(".close_add-card");
 const photoTitleInput = document.querySelector(".popup__input_image-name");
 const photoLinkInput = document.querySelector(".popup__input_image-link");
+const popupAddCard = document.querySelector(".popup_type_add-card");
 
 function createCard(name, link) {
   const newCard = templateCard.content
