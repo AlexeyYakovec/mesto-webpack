@@ -73,8 +73,8 @@ function openPopup(popupName) {
 function closePopup(popupName) {
   popupName.classList.remove("popup_opened");
 
-  document.addEventListener("keydown", handleHotKey);
-  document.addEventListener("mousedown", handleOverlayClick);
+  document.removeEventListener("keydown", handleHotKey);
+  document.removeEventListener("mousedown", handleOverlayClick);
 }
 
 function handleHotKey(e) {
